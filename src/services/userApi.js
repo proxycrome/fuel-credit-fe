@@ -5,7 +5,7 @@ const data = JSON.parse(localStorage.getItem("data"))
 
 export const userApi = createApi({
     reducerPath: "userApi",
-    baseQuery: fetchBaseQuery({baseUrl: "http://dev.myfuelcredit.com/api/v1/"}),
+    baseQuery: fetchBaseQuery({baseUrl: "https://dev.myfuelcredit.com/api/v1/"}),
     endpoints: (builder) => ({
         registerUser: builder.mutation({
             query: formData => ({
