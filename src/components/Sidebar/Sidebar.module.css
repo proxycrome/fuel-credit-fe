@@ -1,0 +1,49 @@
+aside {
+    width: 250px;
+    height: 100vh;
+    border-right: 1px solid #E0E6DD;
+    padding-bottom: 20px;
+}
+
+.logo {
+    padding: 30px 0px 30px 30px;
+}
+
+ul a {
+    text-decoration: none;
+    width: 200px; 
+    color: #626262;
+    padding-left: 10px;   
+}
+
+ul a:hover {
+    color: #4FB518 !important; 
+    padding: 10px 50px 10px 10px;
+    background: #EDF8E8; 
+    border-radius: 10px;
+    border: none; 
+    outline: none;
+}
+
+ul a.active{
+    padding: 10px 50px 10px 10px;
+    background: #EDF8E8;
+    border-radius: 10px;
+    border: none; 
+    list-style-type: none;
+    font-size: 20px;
+    color: #31581C !important;
+    outline: none;
+}
+  
+li{
+    list-style-type: none;
+    font-size: 20px;
+    color: #31581C !important;
+    margin-bottom: 40px;
+}
+
+li .icon{
+    font-size: 24px;
+    margin-right: 20px;
+}

@@ -1,0 +1,111 @@
+.SignUpWrapper{
+    width: 100%;
+}
+
+.FormBox{
+    width: 50%;
+    background: #F9FAF9;
+    border-radius: 30px;
+    height: auto;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.accountType p {
+    color: #626762;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 10px 0;
+}
+
+.accountType p a {
+    color: #4FB518;
+    text-decoration: none;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formGroup{
+    width: 450px;
+    margin: 15px;
+}
+
+.formGroup label{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    display: block;
+    color: #4b504b;
+    margin-bottom: 3px;
+}
+
+.formGroup input{
+    width: 450px;
+    height: 55px;
+    background: #FFFFFF;
+    border: 1px solid #E0E6DD;
+    border-radius: 10px;
+    padding: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;    
+}
+
+.formGroup input:focus{
+    outline: 2px solid #4FB518;
+}
+
+.policy p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #626762;
+}
+
+.policy p a{
+    color: #4FB518;
+    text-decoration: none;
+}
+
+.signupBtn{
+    padding: 17px 25px;
+    width: 450px;
+    height: 55px;
+    background: #4FB518;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 971px){
+    .FormBox{
+        width: 80%;
+    }
+}
+
+@media  screen and (max-width: 591px) {
+    .FormBox{
+        width: 100%;
+    }
+}

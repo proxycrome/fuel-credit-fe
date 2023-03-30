@@ -1,0 +1,155 @@
+.Nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 91px;
+    background: white;
+    box-shadow: 0px 4px 4px rgba(98, 134, 154, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.NavLeft {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.LeftNavItems{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.NavRight {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;   
+    padding-left: 80px; 
+}
+
+.NavButtons button {
+    margin-right: 15px; 
+}
+
+.link a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    color: #626762;
+}
+
+.NavButtons .loginBtn {
+    background: #FFFFFF;
+    border: 1px solid #4FB518;
+    border-radius: 10px;
+    width: 85px;
+    height: 45px;
+    padding: 12px 20px;
+    font-weight: 500;
+    font-size: 15px;
+    color: #4FB518;
+    cursor: pointer;
+    outline: none;
+}
+
+.NavButtons .loginBtn:hover {
+    background: #4FB518;
+    color: #FFFFFF;
+}
+
+.NavButtons .signupBtn {
+    width: 187px;
+    height: 45px;
+    padding: 12px 20px;
+    background: #4FB518;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 15px;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: none;
+}
+
+
+@media screen and (max-width: 1200px){
+    .Nav{
+        height: auto;
+        min-height: 91px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 30px 80px 30px 0px;
+    }
+
+    .hamburger{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 3px;
+        font-size: 36px;
+        border: 3px solid #626762;
+        cursor: pointer;
+    }
+
+    .link {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        color: #626762;
+        margin-top: 10px;
+    }
+
+    .Navbar {
+        display: block;
+    }
+
+    .NavRight {
+        display: none;
+    }
+
+    .NavLeft {
+        display: block;
+    }
+
+    .LeftNavItems{
+        display: none;
+        padding-left: 80px;
+    }
+
+    .NavButtons button{
+        margin-top: 10px;
+    }
+
+    .logo{
+        margin-bottom: 20px;
+        margin-left: 80px;
+    }
+
+    .NavRight.responsive{
+        display: block;
+    }
+
+    .LeftNavItems.responsive{
+        display: block;
+    }
+}

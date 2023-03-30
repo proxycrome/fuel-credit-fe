@@ -1,0 +1,141 @@
+.dashWrapper{
+    display: flex;
+}
+
+.pageContent{
+    padding: 30px 20px 60px 20px;  
+}
+
+.cardSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    width: 235px;
+    height: 190px;
+    background: #FFFFFF;
+    border: 1px solid #E0E6DD;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.fuelIcon{
+    color: #E98918;
+    font-size: 30px;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+}
+
+.details p{
+    font-weight: 500;
+    color: #656565
+}
+
+.details span {
+    font-size: 30px;
+}
+
+.otherSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header a{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #4FB518;
+    text-decoration: none;
+}
+
+.walletCard{
+    width: 500px;
+    height: 280px;
+    background: #FAFAFA;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.creditCard{
+    width: 500px;
+    height: 280px;
+    background: #FAFAFA;
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.details h6{
+    font-weight: 500;
+    color: #656565
+}
+
+.cardContentTop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.cardContentTop a{
+    text-decoration: none;
+    width: 129px;
+    height: 55px;
+    background: #4FB518;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardContentBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 30px; 
+}
+
+.cardContentBottom a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #4FB518;
+    text-decoration: none;
+}
+
+.creditCard a{
+    text-decoration: none;
+    width: 129px;
+    height: 55px;
+    background: #4FB518;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
