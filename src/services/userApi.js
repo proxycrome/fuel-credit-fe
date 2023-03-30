@@ -25,7 +25,7 @@ export const userApi = createApi({
             query: (id) => ({
                 url: `/user/${id}/dashboard`,
                 headers: {
-                    'authorization': `${data.token_type} ${data.access_token}`
+                    'authorization': `${data?.token_type} ${data?.access_token}`
                 }
             })
         })
