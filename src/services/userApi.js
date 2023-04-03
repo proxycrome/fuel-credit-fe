@@ -7,6 +7,14 @@ export const userApi = createApi({
     reducerPath: "userApi",
     baseQuery: fetchBaseQuery({baseUrl: "https://dev.myfuelcredit.com/api/v1/"}),
     endpoints: (builder) => ({
+        getUserDetails: builder.query({
+            query: (id) => ({
+                url: `/user/${id}/dashboard`,
+                headers: {
+                    'authorization': `${data?.token_type} ${data?.access_token}`
+                }
+            })
+        }),
         registerUser: builder.mutation({
             query: formData => ({
                 url: '/register',
@@ -19,14 +27,6 @@ export const userApi = createApi({
                 url: '/login',
                 method: 'POST',
                 body: formData
-            })
-        }),
-        getUserDetails: builder.query({
-            query: (id) => ({
-                url: `/user/${id}/dashboard`,
-                headers: {
-                    'authorization': `${data?.token_type} ${data?.access_token}`
-                }
             })
         })
     })

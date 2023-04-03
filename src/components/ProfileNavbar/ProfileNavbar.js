@@ -7,15 +7,15 @@ const ProfileNavbar = () => {
   const navigate = useNavigate();
 
   const handleChange = () => {
-    setShow(true);
+    setShow(!show);
   };
 
-  const handleChangeLeave = () => {
-    setTimeout(() => {
-        setShow(false);
-    }, 5000)
+  // const handleChangeLeave = () => {
+  //   setTimeout(() => {
+  //       setShow(false);
+  //   }, 5000)
     
-  };
+  // };
 
   const logout = () => {
     localStorage.clear();
@@ -27,7 +27,7 @@ const ProfileNavbar = () => {
       <div>
         <h2>Home</h2>
       </div>
-      <div className={styles.icons} onMouseOver={handleChange} onMouseLeave={handleChangeLeave}>
+      <div className={styles.icons} onClick={handleChange}>
         <i
           className={`fa fa-user-circle-o ${styles.user}`}
           aria-hidden="true"

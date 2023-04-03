@@ -7,6 +7,7 @@ import SignupIcon from "../../components/SignupIcon/SignupIcon";
 import styles from "./Signup.module.css";
 import "bootstrap/dist/css/bootstrap.css";
 import Navbar from "../../components/Navbar/Navbar";
+import { UncontrolledTooltip } from "reactstrap";
 
 const options = [
   { value: "", label: "Select your category" },
@@ -59,9 +60,8 @@ const Signup = () => {
     e.preventDefault();
     const { firstName, lastName, mobileNumber, password, cpassword } = formData;
 
-
     if (password !== cpassword) {
-      alert("Ensure passwrod and confirm password are the same.");
+      alert("Ensure password and confirm password are the same.");
       return;
     }
 
@@ -76,11 +76,13 @@ const Signup = () => {
   };
 
   useEffect(() => {
-    if(response.isError){
-      alert('Something went wrong, Try again')
+    if (response.isError) {
+      alert("Something went wrong, Try again");
     }
     if (response.isSuccess) {
-      toast.success('Registration Created Successfully', {position: "top-right"})
+      toast.success("Registration Created Successfully", {
+        position: "top-right",
+      });
       navigate("/login");
     }
   }, [response, navigate]);
@@ -88,7 +90,7 @@ const Signup = () => {
   return (
     <>
       <Navbar />
-      <Toaster/>
+      <Toaster />
       <div className={styles.SignupWrapper}>
         <div className={styles.FormBox}>
           <div className={styles.header}>
@@ -126,12 +128,13 @@ const Signup = () => {
             <div className={styles.formGroup}>
               <label htmlFor="phoneNumber">Phone Number</label>
               <input
-                type="text"
+                type="number"
                 id="phoneNumber"
                 placeholder="Enter 11-digit phone number"
                 name="mobileNumber"
                 value={formData.mobileNumber}
                 onChange={handleChange}
+                required
               />
             </div>
             <div className={styles.formGroup}>
@@ -178,6 +181,7 @@ const Signup = () => {
                   onChange={handleChange}
                   value={formData.password}
                   pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,32}$"
+                  required
                 />
                 <div className="input-group-text">
                   <i
@@ -189,6 +193,12 @@ const Signup = () => {
                   ></i>
                 </div>
               </div>
+              <UncontrolledTooltip sm placement="top" target="pass">
+                Password must contain minimum of 8 characters at least one
+                capital letter (A,B,C ...), one small letter(a,b,c), one
+                number(0,1,2,...) one special character like
+                (+,*,=,/,_,#,%,(,),?etc)
+              </UncontrolledTooltip>
             </div>
             <div className={styles.formGroup}>
               <label htmlFor="cpass" style={{ display: "block" }}>
@@ -203,6 +213,7 @@ const Signup = () => {
                   id="cpass"
                   onChange={handleChange}
                   value={formData.cpassword}
+                  required
                 />
                 <div className="input-group-text">
                   <i
@@ -222,8 +233,12 @@ const Signup = () => {
                 and <Link to="#">Privacy policy</Link>
               </p>
             </div>
-            <button type="submit" className={styles.signupBtn} disabled={response.isLoading}>
-              {response.isLoading ? "Loading..." :"Create my account"}
+            <button
+              type="submit"
+              className={styles.signupBtn}
+              disabled={response.isLoading}
+            >
+              {response.isLoading ? "Loading..." : "Create my account"}
             </button>
           </form>
         </div>

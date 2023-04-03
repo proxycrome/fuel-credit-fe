@@ -83,7 +83,6 @@ const Login = () => {
                   id="pass"
                   onChange={handleChange}
                   value={formData.password}
-                  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,32}$"
                 />
                 <div className="input-group-text">
                   <i
